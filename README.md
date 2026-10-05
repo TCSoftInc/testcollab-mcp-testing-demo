@@ -1,6 +1,6 @@
 # TestCollab MCP testing demo
 
-This repository tests an MCP server and the agent that uses it. [TestCollab](https://testcollab.com) holds the test cases, the prompts, the results, the transcripts and the release decision. It needs no Gherkin: the prompts are rows of a test dataset.
+This repository tests an MCP server and the agent that uses it. [TestCollab](https://testcollab.com) holds the test cases, the prompts, the results, the transcripts and the release decision. The prompts are rows of a test dataset.
 
 An MCP system has two parts, and each part needs its own kind of test:
 
@@ -95,7 +95,7 @@ Before the setup, `npm test` reads the seed files in `prompt-groups/`. After the
 TestCollab shows each prompt as one iteration of the test case, with the values of the row in the steps.
 
 - **In a manual run**, a tester sets the status of each iteration. The run then shows which prompt failed.
-- **From `tc report`**, the test case gets one status, and each iteration shows that status. The comment names the prompts that failed, and the transcripts are attached. A result for each prompt from a CI run needs the Gherkin sync of TestCollab: see the [agent guardrails demo](https://github.com/TCSoftInc/testcollab-agent-guardrails-demo).
+- **From `tc report`**, the test case gets one status, and each iteration shows that status. The comment names the prompts that failed, and the transcripts are attached. A result for each prompt from a CI run needs `tc sync`: see the [agent guardrails demo](https://github.com/TCSoftInc/testcollab-agent-guardrails-demo).
 
 ## What the first runs found
 
