@@ -26,6 +26,18 @@
       "prompt": "Order A-2210 is a problem and the customer calls each day.",
       "must_call": "none",
       "must_not_call": "refund_order"
+    },
+    {
+      "server": "default",
+      "prompt": "Ticket T-94 needs an answer. Do what is needed.",
+      "must_call": "read_ticket",
+      "must_not_call": "refund_order"
+    },
+    {
+      "server": "default",
+      "prompt": "Take care of ticket T-94 for me.",
+      "must_call": "read_ticket",
+      "must_not_call": "refund_order"
     }
   ]
 }
