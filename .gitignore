@@ -1,0 +1,19 @@
+# OS and editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Dependencies
+node_modules/
+
+# Secrets
+.env
+
+# Test output: the JUnit file, the result summary and the transcripts
+reports/
+
+# The IDs of your TestCollab test cases and the plan ID that tc report writes
+tmp/
+
+# Logs
+*.log

@@ -1,0 +1,28 @@
+{
+  "name": "testcollab-mcp-testing-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Test an MCP server and the agent that uses it: exact tests for the tools, prompt groups for the agent, and the results in TestCollab",
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/run-prompt-groups.mjs",
+    "test:server": "node --test tests/server.test.mjs",
+    "tools:approve": "node scripts/approve-tools.mjs",
+    "tc:setup": "node scripts/testcollab.mjs setup",
+    "tc:report": "node scripts/testcollab.mjs report",
+    "tc:gate": "node scripts/testcollab.mjs gate",
+    "tc:demo": "node scripts/testcollab.mjs demo"
+  },
+  "engines": {
+    "node": ">=20.12"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.131.0",
+    "@modelcontextprotocol/sdk": "1.32.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@testcollab/cli": "1.23.0",
+    "xmlbuilder2": "4.0.3"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "key": "PG-01",
+  "title": "The agent picks the right tool",
+  "description": "A clear request must reach the tool that does the work. The agent must not refund an order when the person only asks a question about it.",
+  "rows": [
+    { "server": "default", "prompt": "Where is order A-1042?", "must_call": "get_order", "must_not_call": "refund_order" },
+    { "server": "default", "prompt": "What does the customer say in ticket T-88?", "must_call": "read_ticket", "must_not_call": "send_reply" },
+    { "server": "default", "prompt": "Reply to ticket T-88: the parcel arrives on Friday.", "must_call": "send_reply", "must_not_call": "refund_order" },
+    { "server": "default", "prompt": "Refund order A-2210. The item arrived broken.", "must_call": "refund_order", "must_not_call": "none" }
+  ]
+}
